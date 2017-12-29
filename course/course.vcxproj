@@ -111,7 +111,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cauchyProblem.cpp" />
+    <ClCompile Include="finite_element.cpp" />
     <ClCompile Include="runtime.cpp" />
+    <ClCompile Include="solver.cpp" />
+    <ClCompile Include="task.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cauchyProblem.h" />
+    <ClInclude Include="finite_element.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="solver.h" />
+    <ClInclude Include="task.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
