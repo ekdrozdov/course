@@ -1,13 +1,17 @@
 #include "task.h"
 
 Task::Task() {
-	initCondFirst.x = 0.0;
-	initCondFirst.y = 0.0;
-
-	initCondSecond.x = 10.0;
-	initCondSecond.y = 15.0;
+	boundCondFirst = 1.0;
+	boundCondSecond = -1.0;
 }
 
 DATA_TYPE Task::f(DATA_TYPE x) {
-	return 2.0 * x;
+	if (x > 0.0 && x < 2.0) {
+		return 0.0;
+	} else if (x > 2.0 && x < 3.0) {
+		return 1.0;
+	} else if (x > 3.0 && x < 7.0) {
+		return 0.25;
+	}
+	return -1000.0;
 }

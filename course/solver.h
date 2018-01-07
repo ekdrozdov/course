@@ -6,17 +6,17 @@
 class Solver {
 public:
 	Solver();
-	Solver(int start, int end, int resolution);
+	Solver(int start, int end, int nodesTotal, DATA_TYPE* xi);
 	~Solver();
-	void buildSystem(CauchyProblem* problem);
+	void buildSLAE(CauchyProblem* problem);
 	void solve();
-	DATA_TYPE getSolution(DATA_TYPE x);
+	DATA_TYPE u(DATA_TYPE x);
 
 private:
+	DATA_TYPE basisFunc(DATA_TYPE x, int feLeftNum, int feRigthNum);
 	FE* fe;
 	DATA_TYPE a, c;
-	DATA_TYPE h;
-	int n; // number of finite elements
 	DATA_TYPE* A;
 	DATA_TYPE* b;
+	DATA_TYPE* q;
 };
